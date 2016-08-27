@@ -1,0 +1,13 @@
+<%= link_to "new todo", new_todo_path %>
+
+<table>
+  <tr>
+    <th>Todos</th>
+  </tr>
+
+  <% @todos.each do |todo| %>
+  <tr>
+    <td><%= todo.text %></td>
+  </tr>
+<% end %>
+</table>

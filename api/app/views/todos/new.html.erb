@@ -1,0 +1,12 @@
+<h1> New Todo </h1>
+<%= form_for :todo, url: todos_path do |f| %>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
