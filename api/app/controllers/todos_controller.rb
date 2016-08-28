@@ -12,7 +12,9 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
-    # JSON.parse(@todo)
+    @todo.save
+
+    render :json => @todo.to_json
   end
 
   def show
