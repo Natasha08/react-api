@@ -12,12 +12,8 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
-
-    if @todo.save
-      redirect_to @todo
-    else
-      render 'new'
-    end
+    # JSON.parse(@todo)
+    render plain: params[:todo].inspect
   end
 
   def show
@@ -34,7 +30,6 @@ class TodosController < ApplicationController
   private
 
   def todo_params
-
-    params.require(:todo).permit(:text)
+    params.permit(:text)
   end
 end
