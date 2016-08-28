@@ -13,7 +13,6 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
     # JSON.parse(@todo)
-    render plain: params[:todo].inspect
   end
 
   def show
