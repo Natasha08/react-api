@@ -45,6 +45,7 @@ group :development, :test do
   gem 'pry-remote'
   gem 'pry-stack_explorer'
   gem 'pry-byebug'
+  gem 'rails-controller-testing'
 end
 
 group :development do
